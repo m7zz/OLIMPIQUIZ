@@ -35,28 +35,19 @@ O projeto é ótimo para treinar:
 src/
 
 ├─ components/
-
 │ ├─ ButtonLink.tsx # Botão estilizado reutilizável
-
 │ ├─ dificultySelector/
-
 │ │ ├─ CardGrid.tsx # Grid com os cards de dificuldade
-
 │ │ └─ DifficultyCard.tsx # Card individual de dificuldade
 
 ├─ data/
-
 │ └─ mockModalities.tsx # Dados das modalidades e perguntas
 
 ├─ pages/
 │ ├─ Modalidades.tsx # Página de seleção de modalidade
-
 │ ├─ DificultySelector.tsx # Página para escolher dificuldade
-
 │ └─ Quiz.tsx # Página do quiz com perguntas
-
 ├─ routes.tsx # Rotas da aplicação
-
 └─ main.tsx # Entrada do React
 
 
