@@ -1,6 +1,6 @@
 # OlimpiQuiz - Quiz Olímpico em React + Tailwind
 
-![Banner](https://via.placeholder.com/800x200.png?text=OlimpiQuiz)
+![Banner](https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Fbanner-quiz-show&ved=0CBYQjRxqFwoTCLDm5_6Zo5MDFQAAAAAdAAAAABAI&opi=89978449)
 
 ## Descrição
 
