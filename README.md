@@ -1,73 +1,116 @@
-# React + TypeScript + Vite
+# OlimpiQuiz - Quiz Olímpico em React + Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Banner](https://via.placeholder.com/800x200.png?text=OlimpiQuiz)
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O **OlimpiQuiz** é um quiz interativo sobre modalidades olímpicas, feito em **React** com **TypeScript**, **React Router v6** e **TailwindCSS**.  
+O usuário pode:
 
-## React Compiler
+- Escolher entre **12 modalidades olímpicas** diferentes.  
+- Selecionar a **dificuldade**: Fácil, Médio ou Difícil.  
+- Jogar o quiz com perguntas específicas de cada modalidade e dificuldade.  
+- Voltar de forma elegante usando o **botão de voltar neon estilizado**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto é ótimo para treinar:
 
-## Expanding the ESLint configuration
+- **Componentização** em React.  
+- **Roteamento dinâmico** com parâmetros de URL.  
+- **Reuso de componentes** (botões, cards).  
+- **Estilização moderna** com TailwindCSS.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tecnologias utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React 18** + **TypeScript**  
+- **React Router v6**  
+- **TailwindCSS**  
+- **Lucide Icons** para ícones das modalidades  
+- **Vite** como bundler rápido
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Estrutura do projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+src/
+├─ components/
+│ ├─ ButtonLink.tsx # Botão estilizado reutilizável
+│ ├─ dificultySelector/
+│ │ ├─ CardGrid.tsx # Grid com os cards de dificuldade
+│ │ └─ DifficultyCard.tsx # Card individual de dificuldade
+├─ data/
+│ └─ mockModalities.tsx # Dados das modalidades e perguntas
+├─ pages/
+│ ├─ Modalidades.tsx # Página de seleção de modalidade
+│ ├─ DificultySelector.tsx # Página para escolher dificuldade
+│ └─ Quiz.tsx # Página do quiz com perguntas
+├─ routes.tsx # Rotas da aplicação
+└─ main.tsx # Entrada do React
+
+
+---
+
+## Como rodar o projeto
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/olimpiquiz.git
+cd olimpiquiz
+
+Instale as dependências:
+
+npm install
+
+Rode o servidor de desenvolvimento:
+
+npm run dev
+
+Abra no navegador:
+
+http://localhost:5173
+Funcionalidades
+
+Página de Modalidades: exibe todas as modalidades olímpicas em cards, com título, descrição e ícone.
+
+Página de Dificuldade: permite escolher a dificuldade de cada modalidade, mostrando número de perguntas e tempo por pergunta.
+
+Quiz: perguntas exibidas de acordo com modalidade e dificuldade escolhida.
+
+Botão de Voltar: retorna para a página anterior com estilo neon idêntico ao botão “Começar”.
+
+Estilo e UI
+
+Paleta de cores:
+
+--color-background:   #0D0D0D;
+--color-surface:      #2A2A2A;
+--color-neon:         #C8FF00;
+--color-soft-white:   #F5F5F5;
+--color-muted:        #6B6B6B;
+--color-error:        #FF3B3B;
+--color-success:      #00E676;
+
+Fontes: Bebas Neue para títulos e DM Sans para textos.
+
+Efeitos: hover, sombras neon e transições suaves nos botões e cards.
+
+Próximos passos
+
+Criar ranking por modalidade/dificuldade.
+
+Adicionar cronômetro visual por pergunta.
+
+Melhorar responsividade para dispositivos móveis.
+
+Salvar pontuação do usuário no localStorage ou banco de dados.
+
+Autor
+
+Marlon (M7zy) - Desenvolvedor Frontend & Backend iniciante avançando com React + TypeScript
+
+Licença
+
+MIT License
