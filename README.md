@@ -31,7 +31,7 @@ O projeto é ótimo para treinar:
 
 ## Estrutura do projeto
 
-
+```bash
 src/
 
 ├─ components/
@@ -49,7 +49,7 @@ src/
 │ └─ Quiz.tsx # Página do quiz com perguntas
 ├─ routes.tsx # Rotas da aplicação
 └─ main.tsx # Entrada do React
-
+```
 
 ---
 
